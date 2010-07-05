@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="228"
+   height="155"
+   version="1.1">  
+  <defs>
+    <style type="text/css">
+			text { fill: white; fill-opacity: 1; font-family: Arial Rounded MT Bold; }
+			text.letters { font-size:86.83pt; }
+			text.bigletters { font-size:136pt;}
+			.hammer { 
+				fill:#3414b0;
+				stroke:#3414b0;
+				fill-opacity:1;
+				stroke-width:2px;
+				stroke-linecap:round;
+				stroke-linejoin:round;
+				stroke-miterlimit:4;
+				stroke-opacity:1;
+				stroke-dasharray:none 
+			}
+			
+			.block { 
+			 	width: 14px;
+			 	height: 14px;
+				fill:#ffd100;
+				fill-opacity:1;
+				stroke:#ffd100;
+				stroke-width:2px;
+				stroke-linecap:round;
+				stroke-linejoin:round;
+				stroke-miterlimit:4;
+				stroke-opacity:1;
+				stroke-dasharray:none 
+			}
+  	</style>
+    <g id="block">
+      <rect
+         height="15"
+         width="15"
+         class="block" />
+    </g>
+    
+    <g id="two_blocks">
+    	<use xlink:href="#block" x="0" y="0" />
+    	<use xlink:href="#block" x="0" y="21" />
+	</g>
+    
+    <g id="four_blocks">
+    	<use xlink:href="#two_blocks" x="0" y="0" />
+    	<use xlink:href="#two_blocks" x="21" y="0" />
+	</g>
+    
+    <g id="eight_blocks">
+    	<use xlink:href="#four_blocks" x="0" y="0" />
+    	<use xlink:href="#four_blocks" x="42" y="0" />
+	</g>
+    
+    <g id="sixteen_blocks">
+    	<use xlink:href="#eight_blocks" x="0" y="0" />
+    	<use xlink:href="#eight_blocks" x="84" y="0" />
+	</g>
+    
+    <g id="block_rotated_neg5">
+    	<use xlink:href="#block" x="0" y="0" transform="rotate(-5, 7.5, 7.5)" />
+	</g>
+    
+    <g id="block_rotated_5">
+    	<use xlink:href="#block" x="0" y="0" transform="rotate(5, 7.5, 7.5)" />
+	</g>
+    
+    <g id="block_rotated_10">
+    	<use xlink:href="#block" x="0" y="0" transform="rotate(10, 7.5, 7.5)" />
+	</g>
+    
+    <g id="block_rotated_20">
+    	<use xlink:href="#block" x="0" y="0" transform="rotate(20, 7.5, 7.5)" />
+	</g>
+    
+    <g id="block_rotated_30">
+    	<use xlink:href="#block" x="0" y="0" transform="rotate(30, 7.5, 7.5)" />
+	</g>
+    
+    <g id="block_rotated_45">
+    	<use xlink:href="#block" x="0" y="0" transform="rotate(45, 7.5, 7.5)" />
+	</g>
+    
+    <g id="block_rotated_50">
+    	<use xlink:href="#block" x="0" y="0" transform="rotate(50, 7.5, 7.5)" />
+	</g>
+    
+    <g id="block_rotated_60">
+    	<use xlink:href="#block" x="0" y="0" transform="rotate(60, 7.5, 7.5)" />
+	</g>
+    
+    <g id="block_rotated_70">
+    	<use xlink:href="#block" x="0" y="0" transform="rotate(70, 7.5, 7.5)" />
+	</g>
+    
+	<!-- In the grid of 4x2 flying blocks, defines the block at column 0, row 0 -->
+    <g id="flying_block_0_0">
+    	<use xlink:href="#block_rotated_30" x="0" y="4"/>
+	</g>
+    
+	<!-- In the grid of 4x2 flying blocks, defines the block at column 0, row 1 -->
+    <g id="flying_block_0_1">
+    	<use xlink:href="#block_rotated_10" x="1" y="4"/>
+	</g>
+    
+	<!-- In the grid of 4x2 flying blocks, defines the block at column 1, row 0 -->
+    <g id="flying_block_1_0">
+    	<use xlink:href="#block_rotated_5" x="-1" y="15" />
+	</g>
+    
+	<!-- In the grid of 4x2 flying blocks, defines the block at column 1, row 1 -->
+    <g id="flying_block_1_1">
+    	<use xlink:href="#block_rotated_45" x="-4" y="17" />
+	</g>
+    
+	<!-- In the grid of 4x2 flying blocks, defines the block at column 2, row 0 -->
+    <g id="flying_block_2_0">
+    	<use xlink:href="#block_rotated_50" x="0" y="15" />
+	</g>
+    
+	<!-- In the grid of 4x2 flying blocks, defines the block at column 2, row 1 -->
+    <g id="flying_block_2_1">
+    	<use xlink:href="#block_rotated_70" x="0" y="20"/>
+	</g>
+    
+	<!-- In the grid of 4x2 flying blocks, defines the block at column 3, row 0 -->
+    <g id="flying_block_3_0">
+    	<use xlink:href="#block_rotated_neg5" x="0" y="6"/>
+	</g>
+    
+	<!-- In the grid of 4x2 flying blocks, defines the block at column 3, row 1 -->
+    <g id="flying_block_3_1">
+    	<use xlink:href="#block_rotated_70" x="0" y="8"/>
+	</g>
+    
+	<!-- The spray of 8 blocks flying below the hammer strike -->
+    <g id="eight_flying_blocks">
+    	<use xlink:href="#flying_block_0_0" x="0" y="0" />
+    	<use xlink:href="#flying_block_0_1" x="0" y="21" /> 
+    	 
+    	<use xlink:href="#flying_block_1_0" x="21" y="0"  />
+    	<use xlink:href="#flying_block_1_1" x="21" y="21" />
+    	
+    	<use xlink:href="#flying_block_2_0" x="42" y="0" />
+    	<use xlink:href="#flying_block_2_1" x="42" y="21"  />
+    	
+    	<use xlink:href="#flying_block_3_0" x="63" y="0" />
+    	<use xlink:href="#flying_block_3_1" x="63" y="21" />
+	</g>
+	
+    <g id="hammer">
+    	<path 
+    		d="M 0,100 0,32 32,0 32,100 z"
+    		class="hammer" />
+		<rect 
+			class="hammer"
+			width="120"
+			height="31"
+			x="8"
+			y="40" />
+   </g>
+  </defs>
+  <g>
+  	<use xlink:href="#hammer" x="88" y="3" />
+  	<use xlink:href="#four_blocks" x="1" y="95" /> <!-- Remember to add 1px for the stroke attached to each block.  yech. -->
+  	<use xlink:href="#two_blocks" x="43" y="95" />
+  
+  	
+  	<!-- Between the above and below sets of blocks lies enough space for 4 columns of blocks.  Those are rendered separately
+  	because they are "broken", and flying about in various directions 
+  	
+  	<use xlink:href="#four_blocks" x="64" y="95" />
+  	<use xlink:href="#four_blocks" x="106" y="95" />
+  	
+  	-->
+  	<use xlink:href="#eight_flying_blocks" x="65" y="95" />
+
+  	<use xlink:href="#eight_blocks" x="148" y="95" />
+  </g>
+</svg>

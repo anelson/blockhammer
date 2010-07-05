@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="21"
+   height="155"
+   version="1.1">  
+  <defs>
+    <style type="text/css">
+			.block { 
+			 	width: 14px;
+			 	height: 14px;
+				fill:#ffd100;
+				fill-opacity:1;
+				stroke:#ffd100;
+				stroke-width:2px;
+				stroke-linecap:round;
+				stroke-linejoin:round;
+				stroke-miterlimit:4;
+				stroke-opacity:1;
+				stroke-dasharray:none 
+			}
+  	</style>
+    <g id="block">
+      <rect
+         height="15"
+         width="15"
+         class="block" />
+    </g>
+    
+    <g id="two_blocks">
+    	<use xlink:href="#block" x="0" y="0" />
+    	<use xlink:href="#block" x="0" y="21" />
+	</g>
+  </defs>
+  <g>
+  	<use xlink:href="#two_blocks" x="1" y="95" />
+  </g>
+</svg>
