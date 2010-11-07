@@ -6,21 +6,26 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   width="228"
-   height="155"
+   width="235"
+   height="160"
    version="1.1">  
   <defs>
-    <style type="text/css">
-    		.background {
-    			fill: url(#backgroundGradient);
-    			fill-opacity: 1;
-    		}
-    		
+    <style type="text/css">    		
 			text { fill: white; fill-opacity: 1; font-family: Arial Rounded MT Bold; }
 			text.letters { font-size:86.83pt; }
 			text.bigletters { font-size:136pt;}
+			
+    		.hammer-start-gradient {
+    			stop-color: #FFD340;
+    		}
+    		
+    		.hammer-end-gradient {
+    			stop-color: #FFC500;
+    		}
+    		
 			.hammer { 
-				fill:#FFC500;
+				/*fill:#FFC500;*/
+    			fill: url(#hammerGradient);
 				stroke:#FFC500;
 				fill-opacity:1;
 				stroke-width:2px;
@@ -31,8 +36,17 @@
 				stroke-dasharray:none 
 			}
 			
+    		.block-start-gradient {
+    			stop-color: #689CD2;
+    		}
+    		
+    		.block-end-gradient {
+    			stop-color: #4188D2;
+    		}
+			
 			.block { 
-				fill:#4188D2;
+				/*fill:#4188D2;*/
+    			fill: url(#blockGradient);
 				fill-opacity:1;
 				stroke:#4188D2;
 				stroke-width:2px;
@@ -44,9 +58,19 @@
 			}
   	</style>
   	
-	<linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-		<stop offset="0%" style="stop-color: #2419B2" />
-		<stop offset="100%" style="stop-color: #100873" />
+	<linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+		<stop offset="0%" class="background-start-gradient" />
+		<stop offset="100%" class="background-end-gradient" />
+	</linearGradient>
+  	
+	<linearGradient id="hammerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+		<stop offset="0%" class="hammer-start-gradient" />
+		<stop offset="100%" class="hammer-end-gradient" />
+	</linearGradient>
+  	
+	<linearGradient id="blockGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+		<stop offset="0%" class="block-start-gradient" />
+		<stop offset="100%" class="block-end-gradient" />
 	</linearGradient>
   		
     <g id="block">
@@ -168,34 +192,32 @@
 	</g>
 	
     <g id="hammer">
+    	<!--
     	<path 
     		d="M 0,100 0,32 32,0 32,100 z"
     		class="hammer" />
-		<rect 
-			class="hammer"
-			width="120"
-			height="31"
-			x="8"
-			y="40" />
+		-->
+    	<path 
+    		d="M 0,100 0,32 32,0 32,40 128,40 128,71 32,71 32,100 z"
+    		class="hammer" />
    </g>
   </defs>
-  <g>
-  	<rect class="background" width="100%" height="100%" />
+  <g>  	
+  	<use xlink:href="#hammer" x="92" y="5" />
   	
-  	<use xlink:href="#hammer" x="88" y="3" />
-  	<use xlink:href="#four_blocks" x="1" y="95" /> <!-- Remember to add 1px for the stroke attached to each block.  yech. -->
-  	<use xlink:href="#two_blocks" x="43" y="95" />
+  	<use xlink:href="#four_blocks" x="5" y="97" /> <!-- Remember to add 1px for the stroke attached to each block.  yech. -->
+  	<use xlink:href="#two_blocks" x="47" y="97" />
   
   	
   	<!-- Between the above and below sets of blocks lies enough space for 4 columns of blocks.  Those are rendered separately
   	because they are "broken", and flying about in various directions 
   	
-  	<use xlink:href="#four_blocks" x="64" y="95" />
-  	<use xlink:href="#four_blocks" x="106" y="95" />
+  	<use xlink:href="#four_blocks" x="64" y="97" />
+  	<use xlink:href="#four_blocks" x="106" y="97" />
   	
   	-->
-  	<use xlink:href="#eight_flying_blocks" x="65" y="95" />
+  	<use xlink:href="#eight_flying_blocks" x="69" y="97" />
 
-  	<use xlink:href="#eight_blocks" x="148" y="95" />
+  	<use xlink:href="#eight_blocks" x="152" y="97" />
   </g>
 </svg>
