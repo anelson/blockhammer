@@ -1,38 +1,176 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-	"http://www.w3.org/TR/html4/strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>Conforming XHTML 1.1 Template</title>
-		
-		<link rel="stylesheet" type="text/css" href="fluid960gs/css/reset.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="fluid960gs/css/text.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="fluid960gs/css/grid.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="fluid960gs/css/layout.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="fluid960gs/css/nav.css" media="screen" />
-		<!--[if IE 6]><link rel="stylesheet" type="text/css" href="fluid960gs/css/ie6.css" media="screen" /><![endif]-->
-		<!--[if IE 7]><link rel="stylesheet" type="text/css" href="fluid960gs/css/ie.css" media="screen" /><![endif]-->
-		
-		<!-- http://colorschemedesigner.com/#3w42fw0w0w0w0 -->
-		<style type="text/css">
-		body {
-			background-color: #fad089;
-			background-image: url(../logo/try_8_blocks_for_tiling.svg); 
-			background-repeat: repeat-x;
-			height: 155px;
-		}
-		.topbanner {
-			background-color: #3b8183;
-		}
-		</style>
-	</head>
-	<body>
-		<div class="topbanner">
-			<div class="logo">
-				<img src="../logo/try_8_hand_rolled.svg">
-			</div>
-			<div class="headerbar">
-				This is the header bar
-			</div>
-		</div>
-	</body>
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>BlockHammer.com - break through web content blocks with BlockHammer</title>
+    
+    <link rel="stylesheet" type="text/css" href="960grid/code/css/reset.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="960grid/code/css/text.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="960grid/code/css/960.css" media="screen" />
+    
+    <!-- http://colorschemedesigner.com/#3A41Tw0w0w0w0 -->
+    <style type="text/css">
+    body {
+      background: #4188D2;
+    }
+    
+    .header #headerContainer {
+      position: relative;
+    }
+    
+    .header {
+      /* Cross-browser CSS gradient per http://www.webdesignerwall.com/tutorials/cross-browser-css-gradient/ */
+      background: #2419B2; /* for non-css3 browsers */
+
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2419B2', endColorstr='#100873'); /* for IE */
+      background: -webkit-gradient(linear, left top, left bottom, from(#2419B2), to(#100873)); /* for webkit browsers */
+      background: -moz-linear-gradient(top,  #2419B2,  #100873); /* for firefox 3.6+ */
+      
+      height: 160px;
+      
+      /*color: #e0e0e0; */
+      /*color: #FFC773;*/
+      color: white;
+      
+      vertical-align: bottom; 
+      
+      /* For some reason the actual height of the child element of header, headerContainer, has an extra 5px of 
+      height.  I think it's due to the <div class="clear"/> that I had to put in so the headerContainer div didn't
+      have a zero height.  Should probably look into ways to avoid that. */
+      overflow: hidden;
+      
+    }
+    
+    .logo {
+      float: left;
+    }
+    
+    .headerText {
+      float: right;
+      border: 5px solid #4188D2;
+      border-top: none;
+      background: #4188D2;
+      
+      /* If possible, round the bottom left and bottom right bordders */
+      border-bottom-left-radius: 5px;    border-bottom-right-radius: 5px;
+      -moz-border-radius-bottomleft: 5px;    -moz-border-radius-bottomright: 5px;
+      -webkit-border-bottom-left-radius: 5px;    -webkit-border-bottom-right-radius: 5px;
+    }
+    
+    h1.title {
+      display: inline;
+      font-weight: bold;
+      font-size: +32pt;
+      font-family: Tahoma,Geneva,sans-serif;
+    }
+    
+    h2.subtitle {
+      display: inline;
+      font-size: +24pt;
+      font-family: Tahoma,Geneva,sans-serif;
+    }
+    
+    .navbar {
+      float: right;
+      position: absolute;
+      bottom: 0;
+      right: 0em;
+      
+      
+      border: 5px solid #4188D2;
+      border-top: none;
+      background: #4188D2;
+      
+      /* If possible, round the top left and top right bordders */
+      border-top-left-radius: 5px;    border-top-right-radius: 5px;
+      -moz-border-radius-topleft: 5px;    -moz-border-radius-topright: 5px;
+      -webkit-border-top-left-radius: 5px;    -webkit-border-top-right-radius: 5px;
+    }
+    
+    .navlinks {
+      /* padding: 0 0 1.75em 1em; */
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      line-height: 1em;
+    }
+    
+    .navlinks li {
+      float: left;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navlinks a {
+      display: block;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0;
+      padding: 0.25em 1em;
+      /*border-left:1px solid #ffc500;*/
+      /* border-top:1px solid #ffc500; */
+      border-right:2px solid #ffc500;
+    }
+
+    .navlinks a.last {
+      border-right: 0px;
+    }
+    
+    .navlinks a.here {
+      background: orange;
+    }
+    
+    .bodyContainer {
+      background-color: #e0e0e0;
+      
+      /* Round the bottom corners of the body block */
+      border-bottom-left-radius: 5px;    border-bottom-right-radius: 5px;
+      -moz-border-radius-bottomleft: 5px;    -moz-border-radius-bottomright: 5px;
+      -webkit-border-bottom-left-radius: 5px;    -webkit-border-bottom-right-radius: 5px;
+      
+      margin-bottom: 5em;
+    }
+    
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container_12" id="headerContainer">
+        <div class="logo">
+          <a href="/" label="Home"><img src="../logo/try_8_hand_rolled_standalone.svg"></a>
+        </div>
+        
+        <div class="headerText">
+          <h1 class="title">Block Hammer:</h1>
+          <h2 class="subtitle">Unblock the Web</h1>
+        </div>
+        
+        <div class="navbar">
+          <ul class="navlinks">
+            <li><a href=".">home</a></li>
+            <li><a href="." class="here">about</a></li>
+            <li><a href=".">FAQ</a></li>
+            <li><a href=".">Register</a></li>
+            <li><a href="." class="last">Sign in</a></li>
+          </ul>
+        </div>
+        
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="container_12 bodyContainer">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac massa magna. Vivamus sit amet nunc ligula. Nam nunc odio, venenatis non sagittis vitae, rutrum id dui. Aenean luctus sapien sed massa hendrerit placerat. Etiam rhoncus congue turpis quis consectetur. Nullam enim leo, vestibulum vitae pulvinar eu, placerat id mauris. Phasellus viverra diam quis mi volutpat vel eleifend quam bibendum. Duis rhoncus risus sit amet leo aliquam quis aliquam nisl ornare. Pellentesque vitae libero nunc, sed cursus lorem. Phasellus vulputate, tellus vel posuere vulputate, arcu libero accumsan nisl, vel vehicula ligula est non turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla id risus id est venenatis semper ut ut sapien. Praesent quis libero ut dolor tempus interdum eu et dolor. Phasellus porta, nisi eleifend bibendum adipiscing, tortor lorem placerat lorem, et varius nulla metus sed elit. Praesent facilisis fringilla tempus. Donec faucibus, mi non elementum ultricies, purus velit adipiscing magna, eget tristique mi neque ac lectus. Morbi ut sem sed leo lobortis rutrum non nec tellus. Vivamus sodales, ante at tincidunt adipiscing, leo arcu luctus tellus, sed viverra mi enim dapibus dui.
+
+Sed faucibus ligula a sapien pretium auctor. Suspendisse potenti. Morbi semper sagittis odio, non pulvinar neque adipiscing quis. Donec id lorem dolor, ut lobortis velit. Cras sit amet sapien et dui ornare lacinia quis ut eros. Vivamus non tristique metus. Proin vitae urna justo. Praesent porttitor imperdiet leo et laoreet. Sed purus odio, tempor vel suscipit eu, dignissim id lacus. Ut vehicula mollis metus. Donec quis elit risus, ut viverra erat. In sit amet tortor sem. Duis porttitor euismod consectetur. Vestibulum lacinia adipiscing ullamcorper. Mauris gravida sodales quam vitae pharetra. Integer hendrerit eros sit amet nisi lobortis et interdum enim suscipit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras metus nulla, tincidunt eu scelerisque at, accumsan in leo. Nunc non odio nunc.
+
+Cras quis ante vitae nibh rhoncus commodo. In hac habitasse platea dictumst. Etiam vel tortor sit amet elit commodo vestibulum. Nunc justo nibh, sagittis vitae scelerisque non, scelerisque quis lorem. Cras quis tellus vel odio elementum commodo at id elit. Nunc eu justo tellus, nec placerat neque. Suspendisse arcu lacus, tristique in pretium vel, pretium in velit. Pellentesque lacus lectus, imperdiet nec condimentum quis, dapibus id urna. Quisque dictum quam eget libero tempus egestas vel in tortor. Pellentesque adipiscing nulla justo. Fusce quis erat eu libero dapibus ullamcorper non ut libero. Etiam non nibh arcu, sit amet molestie sapien. Integer condimentum vulputate massa, ac pretium ipsum ultrices a. Donec at ligula erat, nec facilisis sapien. Nullam at turpis orci. Aliquam nibh libero, sodales id convallis et, consequat ac massa.
+
+Aenean eget tortor augue. Donec vulputate, diam vel fermentum euismod, enim dolor rhoncus orci, ut suscipit lacus elit a quam. Sed sit amet tincidunt turpis. Sed in tortor quis metus placerat condimentum non at ante. Sed tortor eros, cursus ac tempor sed, aliquet eget felis. Pellentesque mattis elementum ligula, non pulvinar purus faucibus eget. Curabitur non sapien sed sapien adipiscing sodales. Donec lacinia risus vitae justo aliquet quis suscipit est pretium. Duis sed urna ligula, eu dictum enim. Suspendisse potenti. Praesent consequat risus at est auctor dapibus. Nulla ullamcorper, mauris vitae fermentum sagittis, metus dolor tincidunt massa, porta commodo nibh elit id urna. Ut pellentesque est viverra sapien sollicitudin egestas. Vestibulum in justo libero, non elementum felis. Fusce quis lacus ut tortor porta iaculis in nec ante. Phasellus in lacus eu tellus fermentum vehicula. Vestibulum mollis vestibulum rutrum. Fusce ac rutrum odio. Morbi mollis arcu sed mauris condimentum gravida.
+
+Praesent nec nibh libero. Duis ac erat in leo pretium suscipit. In hac habitasse platea dictumst. Nam condimentum lacinia ante, at sagittis dui dapibus et. Pellentesque tristique sollicitudin sem, quis ullamcorper magna lacinia et. Nulla facilisi. Sed eget nulla eget diam volutpat auctor. Proin at lectus purus, pharetra viverra turpis. Suspendisse aliquet consequat lectus quis pretium. Aenean a mi risus.
+    <hr>
+    Copyright (C) 2010 BlockHammer.com, All Rights Reserved
+    </div>
+  </body>
 </html>
+
